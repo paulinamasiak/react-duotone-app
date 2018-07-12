@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import photo from './photo.jpg';
 
 function App() {
@@ -12,34 +11,34 @@ function App() {
       </div>
       <div className="content">
         <div className="toolbar">
-          <label className="file-input">
-            <input type="file" />
+          <label htmlFor="photo" className="file-input">
+            <input id="photo" type="file" />
             <span className="file-input-dnd">
               Drag &amp; drop a photo
             </span>
-            <i class="fas fa-plus"></i>
+            <i className="fas fa-plus" />
           </label>
         </div>
         <main className="main-area">
           <section className="cards">
             <div className="card">
               <picture className="thumbnail">
-                <img src={photo} />
+                <img src={photo} alt="" />
               </picture>
             </div>
             <div className="card">
               <picture className="thumbnail">
-                <img src={photo} />
+                <img src={photo} alt="" />
               </picture>
             </div>
             <div className="card">
               <picture className="thumbnail">
-                <img src={photo} />
+                <img src={photo} alt="" />
               </picture>
             </div>
             <div className="card">
               <picture className="thumbnail">
-                <img src={photo} />
+                <img src={photo} alt="" />
               </picture>
             </div>
           </section>
