@@ -1,25 +1,50 @@
 import React from 'react';
 import logo from './logo.svg';
-import './App.css';
+import photo from './photo.jpg';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1 className="App-title">
-          Welcome to React
-        </h1>
-      </header>
-      <p className="App-intro">
-        To get started, edit
-        {' '}
-        <code>
-          src/App.js
-        </code>
-        {' '}
-        and save to reload.
-      </p>
+    <div className="app">
+      <div className="navbar">
+        <div className="app-branding">
+          ReactDuotone
+        </div>
+      </div>
+      <div className="content">
+        <div className="toolbar">
+          <label className="file-input">
+            <input type="file" />
+            <span className="file-input-dnd">
+              Drag &amp; drop a photo
+            </span>
+            <i class="fas fa-plus"></i>
+          </label>
+        </div>
+        <main className="main-area">
+          <section className="cards">
+            <div className="card">
+              <picture className="thumbnail">
+                <img src={photo} />
+              </picture>
+            </div>
+            <div className="card">
+              <picture className="thumbnail">
+                <img src={photo} />
+              </picture>
+            </div>
+            <div className="card">
+              <picture className="thumbnail">
+                <img src={photo} />
+              </picture>
+            </div>
+            <div className="card">
+              <picture className="thumbnail">
+                <img src={photo} />
+              </picture>
+            </div>
+          </section>
+        </main>
+      </div>
     </div>
   );
 }
