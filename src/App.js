@@ -5,17 +5,13 @@ function App() {
   return (
     <div className="app">
       <div className="navbar">
-        <div className="app-branding">
-          ReactDuotone
-        </div>
+        <div className="app-branding">ReactDuotone</div>
       </div>
       <div className="content">
         <div className="toolbar">
           <label htmlFor="photo" className="file-input">
             <input id="photo" type="file" />
-            <span className="file-input-dnd">
-              Drag &amp; drop a photo
-            </span>
+            <span className="file-input-dnd">Drag &amp; drop a photo</span>
             <i className="fas fa-plus" />
           </label>
         </div>

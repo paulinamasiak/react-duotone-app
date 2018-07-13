@@ -9,20 +9,26 @@
     "react-dom": "^16.4.1",
     "react-scripts": "1.1.4"
   },
+  "lint-staged": {
+    "src/**/*.{js,jsx,json,css}": [
+      "prettier --single-quote --write",
+      "git add"
+    ]
+  },
   "scripts": {
+    "precommit": "lint-staged",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "lint:js": "./node_modules/eslint/bin/eslint.js --ext=js --ext=jsx .",
-    "lint:css": "stylelint \"**/*.css\"",
     "test": "react-scripts test --env=jsdom",
+    "prettier-watch": "onchange '**/*.js' -- prettier --write {{changed}}",
+    "lint:css": "stylelint \"**/*.css\"",
     "eject": "react-scripts eject"
   },
   "devDependencies": {
-    "eslint": "^4.19.1",
-    "eslint-config-airbnb": "^17.0.0",
-    "eslint-plugin-import": "^2.13.0",
-    "eslint-plugin-jsx-a11y": "^6.0.3",
-    "eslint-plugin-react": "^7.10.0",
+    "husky": "^0.14.3",
+    "lint-staged": "^7.2.0",
+    "onchange": "^4.0.0",
+    "prettier": "^1.13.7",
     "stylelint": "^9.3.0",
     "stylelint-config-standard": "^18.2.0"
   }
