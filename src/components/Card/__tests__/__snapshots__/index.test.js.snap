@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card component should render correctly with default props 1`] = `
+Array [
+  <div
+    className="card"
+>
+    <picture
+        className="thumbnail"
+    >
+        <img
+            alt=""
+            src=""
+        />
+    </picture>
+</div>,
+]
+`;

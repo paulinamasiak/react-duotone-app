@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { shallow } from 'enzyme';
 import { isAcceptedFile } from '../helpers';
 import FileInput from '../index';

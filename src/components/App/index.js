@@ -1,6 +1,7 @@
 import React from 'react';
 import photo from './photo.jpg';
 import FileInput from '../FileInput';
+import Card from '../Card';
 
 function App() {
   return (
@@ -14,26 +15,12 @@ function App() {
         </div>
         <main className="main-area">
           <section className="cards">
-            <div className="card">
-              <picture className="thumbnail">
-                <img src={photo} alt="" />
-              </picture>
-            </div>
-            <div className="card">
-              <picture className="thumbnail">
-                <img src={photo} alt="" />
-              </picture>
-            </div>
-            <div className="card">
-              <picture className="thumbnail">
-                <img src={photo} alt="" />
-              </picture>
-            </div>
-            <div className="card">
-              <picture className="thumbnail">
-                <img src={photo} alt="" />
-              </picture>
-            </div>
+            <Card imageSrc={photo} />
+            <Card imageSrc={photo} />
+            <Card imageSrc={photo} />
+            <Card imageSrc={photo} />
+            <Card imageSrc={photo} />
+            <Card imageSrc={photo} />
           </section>
         </main>
       </div>
