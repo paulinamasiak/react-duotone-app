@@ -1,5 +1,6 @@
 import React from 'react';
 import photo from './photo.jpg';
+import FileInput from '../FileInput';
 
 function App() {
   return (
@@ -9,11 +10,7 @@ function App() {
       </div>
       <div className="content">
         <div className="toolbar">
-          <label htmlFor="photo" className="file-input">
-            <input id="photo" type="file" />
-            <span className="file-input-dnd">Drag &amp; drop a photo</span>
-            <i className="fas fa-plus" />
-          </label>
+          <FileInput accept="image/*" placeholder="Drag &amp; drop a photo" />
         </div>
         <main className="main-area">
           <section className="cards">

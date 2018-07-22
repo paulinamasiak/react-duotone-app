@@ -1,5 +1,5 @@
-@import '../node_modules/normalize.css/normalize.css';
-@import '../node_modules/@fortawesome/fontawesome-free/css/all.css';
+@import '../../node_modules/normalize.css/normalize.css';
+@import '../../node_modules/@fortawesome/fontawesome-free/css/all.css';
 
 body {
   margin: 0;
@@ -45,7 +45,16 @@ img {
   display: block;
   padding: 10px;
   color: white;
-  outline: 1.5px dashed #4a4143;
+  outline: 1px dashed #4a4143;
+  transition: margin .15s ease-in-out,
+              padding .15s ease-in-out,
+              background-color .15s linear;
+}
+
+.file-input.is-dragover {
+  margin: 2px;
+  padding: 8px;
+  background-color: #302b2c;
 }
 
 .file-input input {

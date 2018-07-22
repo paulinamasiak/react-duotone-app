@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FileInput component should render correctly with default props 1`] = `
+Array [
+  <label
+    className="file-input"
+    onDragEnter={[Function]}
+    onDragLeave={[Function]}
+    onDragOver={[Function]}
+    onDrop={[Function]}
+>
+    <input
+        accept=""
+        onChange={[Function]}
+        type="file"
+    />
+    <span
+        className="file-input-dnd"
+    />
+    <i
+        className="fas fa-plus"
+    />
+</label>,
+]
+`;
