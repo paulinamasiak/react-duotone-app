@@ -87,6 +87,11 @@ img {
   margin-bottom: 2em;
 }
 
+.duotone-img {
+  width: 100%;
+  height: auto;
+}
+
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
   /* TODO */
