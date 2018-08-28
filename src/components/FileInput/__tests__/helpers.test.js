@@ -1,4 +1,31 @@
-import { isAcceptedFile } from '../helpers';
+import { isFileLike, isAcceptedFile } from '../helpers';
+
+describe('isFileLike function', () => {
+  it('should return false when called without a value', () => {
+    // when & then
+    expect(isFileLike(undefined)).toBe(false);
+    expect(isFileLike(null)).toBe(false);
+  });
+
+  it('should retrun false when called wihout an object like value', () => {
+    // when & then
+    expect(isFileLike(33232)).toBe(false);
+    expect(isFileLike('test string')).toBe(false);
+    expect(isFileLike(() => {})).toBe(false);
+  });
+
+  it('should return false when called without a file like object', () => {
+    // when & then
+    expect(isFileLike({})).toBe(false);
+    expect(isFileLike({ a: 'aValue', b: 'bValue' })).toBe(false);
+  });
+
+  it('should return true when called with a file like object', () => {
+    // when & then
+    expect(isFileLike({ name: 'test.jpeg', type: 'image/jpeg' })).toBe(true);
+    expect(isFileLike({ name: 'test.png', type: 'image/*', 'size': 434394 })).toBe(true);
+  });
+});
 
 describe('isAcceptedFile function', () => {
   it('should return false when called without a file', () => {

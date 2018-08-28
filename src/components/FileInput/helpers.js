@@ -1,11 +1,15 @@
-import { isEmpty } from 'lodash';
+import { isEmpty, isObjectLike } from 'lodash';
+
+export const isFileLike = (value) => (
+  !!(isObjectLike(value) && value.name && value.type)
+);
 
 export const isAcceptedFile = (file, accept) => {
   if (isEmpty(accept)) {
     return true;
   }
 
-  if (isEmpty(file)) {
+  if (!isFileLike(file)) {
     return false;
   }
 
