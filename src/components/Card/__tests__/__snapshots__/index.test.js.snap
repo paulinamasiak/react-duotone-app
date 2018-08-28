@@ -1,18 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Card component should render correctly with default props 1`] = `
+exports[`Card component should render children correctly 1`] = `
 Array [
   <div
     className="card"
 >
-    <picture
-        className="thumbnail"
-    >
-        <img
-            alt=""
-            src=""
-        />
-    </picture>
+    <h1>
+        Children
+    </h1>
 </div>,
+]
+`;
+
+exports[`Card component should render correctly with default props 1`] = `
+Array [
+  <div
+    className="card"
+/>,
 ]
 `;

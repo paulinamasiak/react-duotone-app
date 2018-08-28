@@ -1,22 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Card = ({ imageSrc }) => {
+const Card = ({ children }) => {
   return (
     <div className="card">
-      <picture className="thumbnail">
-        <img src={imageSrc} alt="" />
-      </picture>
+      {children}
     </div>
   );
 };
 
 Card.propTypes = {
-  imageSrc: PropTypes.string,
+  children: PropTypes.element,
 };
 
 Card.defaultProps = {
-  imageSrc: '',
+  children: null,
 };
 
 export default Card;

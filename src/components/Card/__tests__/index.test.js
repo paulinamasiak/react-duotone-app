@@ -19,12 +19,12 @@ describe('Card component', () => {
     expect(wrapper.getElements()).toMatchSnapshot();
   });
 
-  it('should pass props.imageSrc to image src prop', () => {
+  it('should render children correctly', () => {
     // given & when
-    const imageSrc = '/static/media/photo.jpg';
-    const wrapper = shallow(<Card imageSrc={imageSrc} />);
+    const children = <h1>Children</h1>;
+    const wrapper = shallow(<Card>{children}</Card>);
 
     // then
-    expect(wrapper.find('img').prop('src')).toBe('/static/media/photo.jpg');
+    expect(wrapper.getElements()).toMatchSnapshot();
   });
 });

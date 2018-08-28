@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import photo from './photo.jpg';
-import FileInput from '../FileInput';
 import Card from '../Card';
+import DuotoneImg from '../DuotoneImg';
+import FileInput from '../FileInput';
+import photo from './photo.jpg';
 
 class App extends Component {
   constructor(props) {
@@ -47,12 +48,27 @@ class App extends Component {
           </div>
           <main className="main-area">
             <section className="cards">
-              <Card imageSrc={imageSrc} />
-              <Card imageSrc={imageSrc} />
-              <Card imageSrc={imageSrc} />
-              <Card imageSrc={imageSrc} />
-              <Card imageSrc={imageSrc} />
-              <Card imageSrc={imageSrc} />
+              <Card>
+                <DuotoneImg
+                  src={imageSrc}
+                  lightTone="#453c45"
+                  darkTone="#a147b1"
+                />
+              </Card>
+              <Card>
+                <DuotoneImg
+                  src={imageSrc}
+                  lightTone="#656565"
+                  darkTone="#e3dc13"
+                />
+              </Card>
+              <Card>
+                <DuotoneImg
+                  src={imageSrc}
+                  lightTone="#2c2522"
+                  darkTone="#117571"
+                />
+              </Card>
             </section>
           </main>
         </div>
