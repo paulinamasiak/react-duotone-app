@@ -1,107 +1,107 @@
 [
   {
     "name": "red",
-    "light": "#241d1d",
-    "dark": "#ff0000"
+    "lightTone": "#241d1d",
+    "darkTone": "#ff0000"
   },
   {
     "name": "red/pink",
-    "light": "#271e1e",
-    "dark": "#d7033a"
+    "lightTone": "#271e1e",
+    "darkTone": "#d7033a"
   },
   {
     "name": "red/black + blue",
-    "light": "#00056c",
-    "dark": "#db2121"
+    "lightTone": "#00056c",
+    "darkTone": "#db2121"
   },
   {
     "name": "red/black + green",
-    "light": "#334824",
-    "dark": "#ff000c"
+    "lightTone": "#334824",
+    "darkTone": "#ff000c"
   },
   {
     "name": "green",
-    "light": "#4d4d4d",
-    "dark": "#1ac922"
+    "lightTone": "#4d4d4d",
+    "darkTone": "#1ac922"
   },
   {
     "name": "green #2",
-    "light": "#006662",
-    "dark": "#8dff8a"
+    "lightTone": "#006662",
+    "darkTone": "#8dff8a"
   },
   {
     "name": "green #3",
-    "light": "#453c3c",
-    "dark": "#00b170"
+    "lightTone": "#453c3c",
+    "darkTone": "#00b170"
   },
   {
     "name": "light purple",
-    "light": "#453c45",
-    "dark": "#a147b1"
+    "lightTone": "#453c45",
+    "darkTone": "#a147b1"
   },
   {
     "name": "grey purple",
-    "light": "#656565",
-    "dark": "#dd89ec"
+    "lightTone": "#656565",
+    "darkTone": "#dd89ec"
   },
   {
     "name": "purple",
-    "light": "#1c0c29",
-    "dark": "#720f84"
+    "lightTone": "#1c0c29",
+    "darkTone": "#720f84"
   },
   {
     "name": "yellow",
-    "light": "#566600",
-    "dark": "#eeff7f"
+    "lightTone": "#566600",
+    "darkTone": "#eeff7f"
   },
   {
     "name": "yellow #2",
-    "light": "#656565",
-    "dark": "#e3dc13"
+    "lightTone": "#656565",
+    "darkTone": "#e3dc13"
   },
   {
     "name": "orange",
-    "light": "#595959",
-    "dark": "#e3b013"
+    "lightTone": "#595959",
+    "darkTone": "#e3b013"
   },
   {
     "name": "saturated orange",
-    "light": "#404040",
-    "dark": "#e39213"
+    "lightTone": "#404040",
+    "darkTone": "#e39213"
   },
   {
     "name": "light orange + greys",
-    "light": "#818181",
-    "dark": "#e9aa46"
+    "lightTone": "#818181",
+    "darkTone": "#e9aa46"
   },
   {
     "name": "blue",
-    "light": "#453c3c",
-    "dark": "#006cb1"
+    "lightTone": "#453c3c",
+    "darkTone": "#006cb1"
   },
   {
     "name": "grey-blue",
-    "light": "#6c6c6c",
-    "dark": "#259fed"
+    "lightTone": "#6c6c6c",
+    "darkTone": "#259fed"
   },
   {
     "name": "cyan",
-    "light": "#7e7e7e",
-    "dark": "#25ede6"
+    "lightTone": "#7e7e7e",
+    "darkTone": "#25ede6"
   },
   {
     "name": "cyan-darker",
-    "light": "#2c2522",
-    "dark": "#117571"
+    "lightTone": "#2c2522",
+    "darkTone": "#117571"
   },
   {
     "name": "beetwen orange/red",
-    "light": "#625353",
-    "dark": "#e97446"
+    "lightTone": "#625353",
+    "darkTone": "#e97446"
   },
   {
     "name": "dark brown",
-    "light": "#1e1511",
-    "dark": "#5b2713"
+    "lightTone": "#1e1511",
+    "darkTone": "#5b2713"
   }
 ]
