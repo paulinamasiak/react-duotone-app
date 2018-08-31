@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import Card from '../Card';
 import DuotoneImg from '../DuotoneImg';
 import FileInput from '../FileInput';
+import LazyList from '../LazyList';
+import duotones from '../../data/duotones.json';
 import photo from './photo.jpg';
 
 class App extends Component {
@@ -14,6 +16,7 @@ class App extends Component {
     };
 
     this.handleFileChange = this.handleFileChange.bind(this);
+    this.renderListItem = this.renderListItem.bind(this);
   }
 
   componentDidMount() {
@@ -30,9 +33,22 @@ class App extends Component {
     }
   }
 
-  render() {
+  renderListItem(item) {
     const { imageSrc } = this.state;
 
+    return (
+      <div className="col-sm-12 col-md-6" key={item.name}>
+        <Card>
+          <DuotoneImg
+            src={imageSrc}
+            {...item}
+          />
+        </Card>
+      </div>
+    );
+  }
+
+  render() {
     return (
       <div className="app">
         <div className="navbar">
@@ -47,29 +63,10 @@ class App extends Component {
             />
           </div>
           <main className="main-area">
-            <section className="cards">
-              <Card>
-                <DuotoneImg
-                  src={imageSrc}
-                  lightTone="#453c45"
-                  darkTone="#a147b1"
-                />
-              </Card>
-              <Card>
-                <DuotoneImg
-                  src={imageSrc}
-                  lightTone="#656565"
-                  darkTone="#e3dc13"
-                />
-              </Card>
-              <Card>
-                <DuotoneImg
-                  src={imageSrc}
-                  lightTone="#2c2522"
-                  darkTone="#117571"
-                />
-              </Card>
-            </section>
+            <LazyList
+              items={duotones}
+              itemRenderer={this.renderListItem}
+            />
           </main>
         </div>
       </div>
