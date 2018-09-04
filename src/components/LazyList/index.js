@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { noop, take } from 'lodash';
+import { noop, take, throttle } from 'lodash';
+
+const SCROLL_WAIT = 16;
 
 class LazyList extends Component {
   constructor(props) {
@@ -10,7 +12,7 @@ class LazyList extends Component {
       count: this.props.minCount,
     };
 
-    this.handleScroll = this.handleScroll.bind(this);
+    this.handleScroll = throttle(this.handleScroll.bind(this), SCROLL_WAIT);
   }
 
   componentDidMount() {
@@ -21,17 +23,17 @@ class LazyList extends Component {
     window.removeEventListener('scroll', this.handleScroll, false);
   }
 
-  handleScroll(event) {
+  handleScroll() {
     const { count } = this.state;
     const { items, step, threshold } = this.props;
 
-    if (count >= items.lenght) {
+    if (items.length <= count) {
       return;
     }
 
     if (
-      window.innerHeight + window.scrollY >=
-      document.body.offsetHeight - threshold
+      document.body.offsetHeight - threshold <=
+      window.innerHeight + window.scrollY
     ) {
       this.setState((prevState) => ({
         count: prevState.count + step,

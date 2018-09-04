@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { duotone } from './filters';
 
-class DuotoneImg extends Component {
+class DuotoneImg extends PureComponent {
   constructor(props) {
     super(props);
 
