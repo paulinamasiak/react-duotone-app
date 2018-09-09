@@ -43,15 +43,16 @@ class LazyList extends Component {
 
   render() {
     const { count } = this.state;
-    const { items, itemRenderer } = this.props;
+    const { className, items, itemRenderer } = this.props;
 
     return (
-      <div className="row">{take(items, count).map(itemRenderer)}</div>
+      <div className={'row ' + className }>{take(items, count).map(itemRenderer)}</div>
     );
   }
 }
 
 LazyList.propTypes = {
+  className: PropTypes.string,
   items: PropTypes.array,
   itemRenderer: PropTypes.func,
   minCount: PropTypes.number,

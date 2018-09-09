@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Loader from '../Loader';
 import Card from '../Card';
 import DuotoneImg from '../DuotoneImg';
 import FileInput from '../FileInput';
@@ -11,12 +12,15 @@ class App extends Component {
     super(props);
 
     this.fileReader = new FileReader();
+
     this.state = {
+      isLoading: true,
       imageSrc: photo,
     };
 
     this.handleFileChange = this.handleFileChange.bind(this);
     this.renderListItem = this.renderListItem.bind(this);
+    this.handleDuotoneLoad = this.handleDuotoneLoad.bind(this);
   }
 
   componentDidMount() {
@@ -29,7 +33,21 @@ class App extends Component {
 
   handleFileChange(file) {
     if (file) {
+      this.setState({
+        isLoading: true,
+      });
+
       this.fileReader.readAsDataURL(file);
+    }
+  }
+
+  handleDuotoneLoad() {
+    const { isLoading } = this.state;
+
+    if (isLoading) {
+      this.setState({
+        isLoading: false,
+      });
     }
   }
 
@@ -42,6 +60,7 @@ class App extends Component {
           <DuotoneImg
             src={imageSrc}
             {...item}
+            onLoad={this.handleDuotoneLoad}
           />
         </Card>
       </div>
@@ -49,6 +68,8 @@ class App extends Component {
   }
 
   render() {
+    const { isLoading } = this.state;
+
     return (
       <div className="app">
         <div className="navbar">
@@ -63,7 +84,9 @@ class App extends Component {
             />
           </div>
           <main className="main-area">
+            { isLoading ? <Loader /> : null }
             <LazyList
+              className={isLoading ? 'hidden' : ''}
               items={duotones}
               itemRenderer={this.renderListItem}
             />

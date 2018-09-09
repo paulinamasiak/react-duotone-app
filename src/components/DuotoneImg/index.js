@@ -1,10 +1,16 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
+import { noop } from 'lodash';
 import { duotone } from './filters';
 
 class DuotoneImg extends PureComponent {
   constructor(props) {
     super(props);
+
+    this.state = {
+      loaded: false,
+    };
 
     this.canvasRef = React.createRef();
   }
@@ -29,6 +35,10 @@ class DuotoneImg extends PureComponent {
 
       context.drawImage(img, 0, 0);
       context.putImageData(duotone(this.getPixels(), lightTone, darkTone), 0, 0);
+
+      this.setState({
+        loaded: true,
+      }, this.props.onLoad);
     }
 
     img.src = src;
@@ -42,8 +52,12 @@ class DuotoneImg extends PureComponent {
   }
 
   render() {
+    const className = classNames('duotone-img', {
+      'fade-in': this.state.loaded,
+    });
+
     return (
-      <canvas className="duotone-img" ref={this.canvasRef} />
+      <canvas className={className} ref={this.canvasRef} />
     );
   }
 }
@@ -52,12 +66,14 @@ DuotoneImg.propTypes = {
   darkTone: PropTypes.string,
   lightTone: PropTypes.string,
   src: PropTypes.string,
+  onLoad: PropTypes.func,
 };
 
 DuotoneImg.defaultProps = {
   darkTone: '#ffffff',
   lightTone: '#000000',
   src: '',
+  onLoad: noop,
 };
 
 export default DuotoneImg;
