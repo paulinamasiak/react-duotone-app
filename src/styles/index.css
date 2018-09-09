@@ -43,6 +43,7 @@ img {
 }
 
 .file-input {
+  cursor: pointer;
   display: block;
   padding: 10px;
   color: white;
