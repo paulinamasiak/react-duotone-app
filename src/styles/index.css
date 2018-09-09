@@ -48,9 +48,10 @@ img {
   padding: 10px;
   color: white;
   outline: 1px dashed #4a4143;
-  transition: margin .15s ease-in-out,
-              padding .15s ease-in-out,
-              background-color .15s linear;
+  transition:
+    margin 0.15s ease-in-out,
+    padding 0.15s ease-in-out,
+    background-color 0.15s linear;
 }
 
 .file-input.is-dragover {
@@ -97,7 +98,6 @@ img {
 .loader {
   width: 100px;
   height: 100px;
-
   position: relative;
   margin: 20vh auto;
 }
@@ -112,12 +112,11 @@ img {
   position: absolute;
   top: 0;
   left: 0;
-
-  animation: bounce 2.0s infinite ease-in-out;
+  animation: bounce 2s infinite ease-in-out;
 }
 
 .double-bounce2 {
-  animation-delay: -1.0s;
+  animation-delay: -1s;
 }
 
 .fade-in {
@@ -129,12 +128,13 @@ img {
 }
 
 @keyframes bounce {
-  0%, 100% {
-    transform: scale(0.0);
+  0%,
+  100% {
+    transform: scale(0);
   }
 
   50% {
-    transform: scale(1.0);
+    transform: scale(1);
   }
 }
 
