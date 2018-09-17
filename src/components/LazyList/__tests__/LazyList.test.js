@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import LazyList from '../index';
+import LazyList from '../LazyList';
 
 it('renders without crashing', () => {
   const div = document.createElement('div');

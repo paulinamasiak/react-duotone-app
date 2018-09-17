@@ -1,6 +1,6 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import DuotoneImg from '../index';
+import DuotoneImg from '../DuotoneImg';
 
 describe('DuotoneImg component', () => {
   it('should render without crashing', () => {
